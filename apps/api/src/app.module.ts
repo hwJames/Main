@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
+import { ServeStaticModule } from '@nestjs/serve-static';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { join } from 'path';
+import { rootPath } from '@constants';
 
 // Config
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -45,6 +48,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       useFactory: (configService: ConfigService) =>
         configService.get('database'),
       inject: [ConfigService],
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(rootPath, '..', 'web', 'build'),
     }),
   ],
   controllers: [AppController],
