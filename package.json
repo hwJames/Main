@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "main",
   "private": true,
   "version": "0.0.1",
-  "description": "Portfolio Project With Yarn Berry Workspace",
+  "description": "Main Site Project With Yarn Berry Workspace",
   "workspaces": [
     "apps/*"
   ],

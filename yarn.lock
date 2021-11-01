@@ -2385,6 +2385,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/mapped-types@npm:*":
+  version: 1.0.0
+  resolution: "@nestjs/mapped-types@npm:1.0.0"
+  peerDependencies:
+    "@nestjs/common": ^7.0.8 || ^8.0.0
+    class-transformer: ^0.2.0 || ^0.3.0 || ^0.4.0
+    class-validator: ^0.11.1 || ^0.12.0 || ^0.13.0
+    reflect-metadata: ^0.1.12
+  checksum: 64e4bb9313a0d71c9535a36679e3c0d3590a8cfd3cd0897175213131afa9bb4b47f547607955f0e3578f26c509e755d7adc898bfcf47bb90117688b5d9b333fb
+  languageName: node
+  linkType: hard
+
 "@nestjs/platform-express@npm:^8.0.0":
   version: 8.1.2
   resolution: "@nestjs/platform-express@npm:8.1.2"
@@ -4267,6 +4279,7 @@ __metadata:
     "@nestjs/common": ^8.1.1
     "@nestjs/config": ^1.0.2
     "@nestjs/core": ^8.1.1
+    "@nestjs/mapped-types": "*"
     "@nestjs/platform-express": ^8.0.0
     "@nestjs/schematics": ^8.0.0
     "@nestjs/serve-static": ^2.2.2
@@ -11765,6 +11778,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"main@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "main@workspace:."
+  dependencies:
+    "@types/node": ^16.0.0
+    "@typescript-eslint/eslint-plugin": ^5.2.0
+    "@typescript-eslint/parser": ^5.2.0
+    eslint: ^8.1.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^4.0.0
+    express: ^4.17.1
+    prettier: ^2.4.1
+    ts-node: ^10.4.0
+    typescript: ^4.4.4
+  languageName: unknown
+  linkType: soft
+
 "make-dir@npm:^2.0.0":
   version: 2.1.0
   resolution: "make-dir@npm:2.1.0"
@@ -13455,23 +13485,6 @@ __metadata:
   checksum: 91fef602f13f8f4c64385d0ad2a36cc9dc6be0b8d10a2628ee2c3c7b9917ab4fefb458815b82cea2abf4b785cd11c9b4e2d917ac6fa06f14b6fa880ca8f8928c
   languageName: node
   linkType: hard
-
-"portfolio@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "portfolio@workspace:."
-  dependencies:
-    "@types/node": ^16.0.0
-    "@typescript-eslint/eslint-plugin": ^5.2.0
-    "@typescript-eslint/parser": ^5.2.0
-    eslint: ^8.1.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^4.0.0
-    express: ^4.17.1
-    prettier: ^2.4.1
-    ts-node: ^10.4.0
-    typescript: ^4.4.4
-  languageName: unknown
-  linkType: soft
 
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
