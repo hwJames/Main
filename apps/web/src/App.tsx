@@ -1,5 +1,5 @@
 import React, { useState, useEffect, WheelEvent } from 'react';
-import './App.css';
+import './assets/css/App.css';
 
 const App: React.FC = () => {
   const [overScroll, setOverScroll] = useState(false);
@@ -35,9 +35,17 @@ const App: React.FC = () => {
         }
       }}
     >
-      <div className="wrap">1</div>
-      <div className="wrap">2</div>
-      <div className="wrap">3</div>
+      <header>Header</header>
+      <article>
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+      </article>
+      <footer>
+        © 2021 JIHOON KIM
+        <br />
+        ALL RIGHTS RESERVED.
+      </footer>
     </div>
   );
 };
