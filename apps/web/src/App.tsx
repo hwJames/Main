@@ -1,8 +1,14 @@
-import React, { useState, useEffect, WheelEvent } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  WheelEvent,
+  KeyboardEvent,
+} from 'react';
 import './assets/css/App.css';
 
 const App: React.FC = () => {
-  const [overScroll, setOverScroll] = useState(false);
+  const [isOverScroll, setIsOverScroll] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
   const pageCnt = 3;
@@ -12,28 +18,64 @@ const App: React.FC = () => {
     window.scrollTo({ top: page * window.innerHeight, behavior: 'smooth' });
   }, [page]);
 
+  const pageUp = useCallback(() => {
+    if (page > 0) {
+      setPage(page - 1);
+    }
+
+    setIsScroll(true);
+
+    setTimeout(() => {
+      setIsScroll(false);
+    }, 1000);
+  }, [page]);
+
+  const pageDown = useCallback(() => {
+    if (page < pageCnt - 1) {
+      setPage(page + 1);
+    }
+
+    setIsScroll(true);
+
+    setTimeout(() => {
+      setIsScroll(false);
+    }, 1000);
+  }, [page]);
+
+  const onWheelEvent = useCallback(
+    (e: WheelEvent<HTMLDivElement>) => {
+      if (!isScroll && e.deltaX === 0) {
+        if (e.deltaY < 0) {
+          pageUp();
+        }
+        if (e.deltaY > 0) {
+          pageDown();
+        }
+      }
+    },
+    [isScroll, pageUp, pageDown],
+  );
+
+  const onKeyDownEvent = useCallback(
+    (e: KeyboardEvent<HTMLDivElement>) => {
+      if (!isScroll) {
+        if (e.code === 'ArrowLeft' || e.code === 'ArrowUp') {
+          pageUp();
+        }
+        if (e.code === 'ArrowRight' || e.code === 'ArrowDown') {
+          pageDown();
+        }
+      }
+    },
+    [isScroll, pageUp, pageDown],
+  );
+
   return (
     <div
       className="container"
-      onWheel={(e: WheelEvent<HTMLDivElement>) => {
-        if (!isScroll && e.deltaX === 0) {
-          if (page > 0 && e.deltaY < 0) {
-            setPage(page - 1);
-            console.log('up');
-          }
-          if (page < pageCnt - 1 && e.deltaY > 0) {
-            console.log('down');
-            setPage(page + 1);
-          }
-          if (e.deltaY !== 0) {
-            setIsScroll(true);
-
-            setTimeout(() => {
-              setIsScroll(false);
-            }, 1000);
-          }
-        }
-      }}
+      onWheel={onWheelEvent}
+      tabIndex={0}
+      onKeyDown={onKeyDownEvent}
     >
       <header>Header</header>
       <article>
