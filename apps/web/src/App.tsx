@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const [page, setPage] = useState(0);
 
   useEffect(() => {
-    window.scrollTo({ top: page * window.innerHeight, behavior: 'smooth' });
+    window.scroll({ top: page * window.innerHeight, behavior: 'smooth' });
   }, [page]);
 
   const pageUp = useCallback(() => {
@@ -44,7 +44,7 @@ const App: React.FC = () => {
 
   const onWheelEvent = useCallback(
     (e: WheelEvent<HTMLDivElement>) => {
-      if (!isScroll && e.deltaX === 0) {
+      if (!isScroll) {
         if (e.deltaY < 0) {
           pageUp();
         }

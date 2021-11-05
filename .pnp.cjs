@@ -6171,6 +6171,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/smoothscroll-polyfill", [
+        ["npm:0.3.1", {
+          "packageLocation": "./.yarn/cache/@types-smoothscroll-polyfill-npm-0.3.1-4930c615ad-871a5b556c.zip/node_modules/@types/smoothscroll-polyfill/",
+          "packageDependencies": [
+            ["@types/smoothscroll-polyfill", "npm:0.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/source-list-map", [
         ["npm:0.1.2", {
           "packageLocation": "./.yarn/cache/@types-source-list-map-npm-0.1.2-1983e10da7-fda8f37537.zip/node_modules/@types/source-list-map/",
@@ -21252,6 +21261,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["smoothscroll-polyfill", [
+        ["npm:0.4.4", {
+          "packageLocation": "./.yarn/cache/smoothscroll-polyfill-npm-0.4.4-69b5bb4bf7-b99ff7d916.zip/node_modules/smoothscroll-polyfill/",
+          "packageDependencies": [
+            ["smoothscroll-polyfill", "npm:0.4.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["snapdragon", [
         ["npm:0.8.2", {
           "packageLocation": "./.yarn/cache/snapdragon-npm-0.8.2-2bcc47d217-a197f242a8.zip/node_modules/snapdragon/",
@@ -23460,6 +23478,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:12.20.36"],
             ["@types/react", "npm:17.0.33"],
             ["@types/react-dom", "npm:17.0.10"],
+            ["@types/smoothscroll-polyfill", "npm:0.3.1"],
             ["@typescript-eslint/eslint-plugin", "virtual:04f359ef7d0a7ecc54609293656a259544af0bca5a8a19764ae07a8f29abcddadf41bae98f5bed2b940424121e87803e0b92aa55030457748669986659d3b666#npm:5.3.0"],
             ["@typescript-eslint/parser", "virtual:04f359ef7d0a7ecc54609293656a259544af0bca5a8a19764ae07a8f29abcddadf41bae98f5bed2b940424121e87803e0b92aa55030457748669986659d3b666#npm:5.3.0"],
             ["eslint", "npm:8.1.0"],
@@ -23475,6 +23494,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:e293270790bda2411a3626e57e15862403457209cbe755a222c752c37c8f53870ac5708914fca9c46ad11f81505a4af613c8b5e4bba765909191bb5f14d3b656#npm:17.0.2"],
             ["react-scripts", "virtual:e293270790bda2411a3626e57e15862403457209cbe755a222c752c37c8f53870ac5708914fca9c46ad11f81505a4af613c8b5e4bba765909191bb5f14d3b656#npm:4.0.3"],
+            ["smoothscroll-polyfill", "npm:0.4.4"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
             ["web-vitals", "npm:1.1.2"]
           ],
