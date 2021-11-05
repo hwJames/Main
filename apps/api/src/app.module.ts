@@ -12,7 +12,6 @@ import * as Joi from 'joi';
 
 // TypeORM
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ContactModule } from './containers/v1/contact/contact.module';
 import { ProjectModule } from './containers/v1/project/project.module';
 import { AdminModule } from './containers/v1/admin/admin.module';
 
@@ -55,7 +54,6 @@ import { AdminModule } from './containers/v1/admin/admin.module';
     ServeStaticModule.forRoot({
       rootPath: join(rootPath, '..', 'web', 'build'),
     }),
-    ContactModule,
     ProjectModule,
     AdminModule,
   ],

@@ -8,10 +8,9 @@ import React, {
 import './assets/css/App.css';
 
 const App: React.FC = () => {
-  const [isOverScroll, setIsOverScroll] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
-  const pageCnt = 3;
+  const pageCnt = 5;
   const [page, setPage] = useState(0);
 
   useEffect(() => {
@@ -44,7 +43,7 @@ const App: React.FC = () => {
 
   const onWheelEvent = useCallback(
     (e: WheelEvent<HTMLDivElement>) => {
-      if (!isScroll) {
+      if (!isScroll && e.deltaX === 0) {
         if (e.deltaY < 0) {
           pageUp();
         }
@@ -79,9 +78,11 @@ const App: React.FC = () => {
     >
       <header>Header</header>
       <article>
-        <section>1</section>
-        <section>2</section>
-        <section>3</section>
+        <section>HELLO WORLD</section>
+        <section>ABOUT</section>
+        <section>RESUME</section>
+        <section>PORTFOLIO</section>
+        <section>CONTACT US</section>
       </article>
       <footer>
         © 2021 JIHOON KIM
