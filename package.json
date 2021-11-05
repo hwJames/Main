@@ -14,7 +14,8 @@
     "dev:api": "yarn workspace api start:dev",
     "test:api": "yarn workspace api test",
     "build": "echo \"WEB Build\" && yarn build:web && echo \"API Build\" && yarn build:api",
-    "start": "yarn build:web && yarn dev:api"
+    "start": "yarn build:web && yarn dev:api",
+    "start:prod": "yarn workspace api start:prod"
   },
   "packageManager": "yarn@3.1.0",
   "devDependencies": {
