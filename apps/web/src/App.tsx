@@ -5,6 +5,8 @@ import React, {
   WheelEvent,
   KeyboardEvent,
 } from 'react';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
 
 const App: React.FC = () => {
@@ -12,6 +14,7 @@ const App: React.FC = () => {
 
   const pageCnt = 5;
   const [page, setPage] = useState(0);
+  const [color, setColor] = useState('black');
 
   useEffect(() => {
     window.scroll({ top: page * window.innerHeight, behavior: 'smooth' });
@@ -20,6 +23,12 @@ const App: React.FC = () => {
   const pageUp = useCallback(() => {
     if (page > 0) {
       setPage(page - 1);
+    }
+
+    if (page > 4 || page === 2) {
+      setColor('white');
+    } else {
+      setColor('black');
     }
 
     setIsScroll(true);
@@ -32,6 +41,12 @@ const App: React.FC = () => {
   const pageDown = useCallback(() => {
     if (page < pageCnt - 1) {
       setPage(page + 1);
+    }
+
+    if (page >= 3 || page === 0) {
+      setColor('white');
+    } else {
+      setColor('black');
     }
 
     setIsScroll(true);
@@ -71,20 +86,55 @@ const App: React.FC = () => {
 
   return (
     <div
-      className="container"
+      className="container-custom"
       onWheel={onWheelEvent}
       tabIndex={0}
       onKeyDown={onKeyDownEvent}
     >
-      <header>Header</header>
+      <header className={color}>
+        <div className="header-f1">hwJames</div>
+        <div className="header-f2 ml5">+82 10-4509-8036</div>
+        <div className="header-f2 ml1">/</div>
+        <div className="header-f2 ml1">HWJAMESHW@NAVER.COM</div>
+      </header>
+
       <article>
-        <section>HELLO WORLD</section>
-        <section>ABOUT</section>
+        {/* Home */}
+        <section>
+          <div className="wrap">
+            <div className="home-f1">JIHOON KIM</div>
+            <div className="home-f2 mt1">
+              시이발 <br /> ㅈ같넹
+            </div>
+          </div>
+        </section>
+
+        {/* About (Stack) */}
+        <section className="about-wrap white">
+          <div className="wrap">
+            <div className="about-f1">시이발 집이 가고 시펑요</div>
+          </div>
+          <div className="about-sub"></div>
+        </section>
+
+        {/* Resume */}
         <section>RESUME</section>
+
+        {/* Portfolio */}
         <section>PORTFOLIO</section>
-        <section>CONTACT US</section>
+
+        {/* Contact */}
+        <section className="contact-wrap white">
+          <div className="black-wrap center">
+            <div className="wrap">
+              <div className="contact-f1">Contact Me</div>
+              <div className="contact-f2">선생님들 연락주세요 :)</div>
+              <Button className="mt1">연락주세요 ^^7</Button>
+            </div>
+          </div>
+        </section>
       </article>
-      <footer>
+      <footer className={color}>
         © 2021 JIHOON KIM
         <br />
         ALL RIGHTS RESERVED.
