@@ -101,6 +101,30 @@ section {
     letter-spacing: -1px;
 }
 
+.experience-wrap {
+    background-image: url(../img/experience.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size : cover;
+}
+
+.experience-f1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
+}
+
+.portfolio-wrap {
+}
+
+.portfolio-f1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
+}
+
 .contact-wrap {
     background-image: url(../img/contact.jpg);
     background-position: center center;

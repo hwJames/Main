@@ -25,7 +25,7 @@ const App: React.FC = () => {
       setPage(page - 1);
     }
 
-    if (page > 4 || page === 2) {
+    if (page > 4 || page === 2 || page === 3) {
       setColor('white');
     } else {
       setColor('black');
@@ -43,7 +43,7 @@ const App: React.FC = () => {
       setPage(page + 1);
     }
 
-    if (page >= 3 || page === 0) {
+    if (page >= 3 || page === 0 || page === 1) {
       setColor('white');
     } else {
       setColor('black');
@@ -104,7 +104,8 @@ const App: React.FC = () => {
           <div className="wrap">
             <div className="home-f1">JIHOON KIM</div>
             <div className="home-f2 mt1">
-              시이발 <br /> ㅈ같넹
+              HELLO WORLD! <br />
+              I&apos;m Developer
             </div>
           </div>
         </section>
@@ -112,16 +113,26 @@ const App: React.FC = () => {
         {/* About (Stack) */}
         <section className="about-wrap white">
           <div className="wrap">
-            <div className="about-f1">시이발 집이 가고 시펑요</div>
+            <div className="about-f1">씨이잉ㅇㅇ 집이 가고 시펑요</div>
           </div>
           <div className="about-sub"></div>
         </section>
 
-        {/* Resume */}
-        <section>RESUME</section>
+        {/* Experience */}
+        <section className="experience-wrap white">
+          <div className="black-wrap center">
+            <div className="wrap">
+              <div className="experience-f1">Experience</div>
+            </div>
+          </div>
+        </section>
 
         {/* Portfolio */}
-        <section>PORTFOLIO</section>
+        <section className="portfolio-wrap">
+          <div className="wrap">
+            <div className="portfolio-f1">Portfolio</div>
+          </div>
+        </section>
 
         {/* Contact */}
         <section className="contact-wrap white">
