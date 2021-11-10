@@ -76,39 +76,50 @@ section {
     line-height: 6rem;
 }
 
-.about-wrap {
-    background-image: url(../img/about.png);
-    background-position: center center;
-    background-repeat : no-repeat;
-    background-size : cover;
+.resume-f1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
 }
 
-.about-sub {
-    position: absolute;
-    height: 30vh;
-    width: 25vw;
-    right: 10vh;
-    background-image: url(../img/about-sub.jpg);
-    background-position: center center;
-    background-repeat : no-repeat;
-    background-size : contain;
+.resume-f2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
 }
 
-.about-f1 {
-    font-size: 2rem;
+.resume-f3 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
+    color: rgba(127, 127, 127, 1);
+}
+
+.resume-container {
+    height: 60vh;
+}
+
+.resume-wrap {
+    min-height: 5em;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
     font-weight: 600;
     font-family: "Pretendard";
     letter-spacing: -1px;
 }
 
-.experience-wrap {
+.stack-wrap {
     background-image: url(../img/experience.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size : cover;
 }
 
-.experience-f1 {
+.stack-f1 {
     font-size: 3.5rem;
     font-weight: 800;
     font-family: "Pretendard";
@@ -149,8 +160,44 @@ section {
     width: 60vw;
 }
 
+.f1 {
+    flex: 1;
+}
+
+.f2 {
+    flex: 2;
+}
+
+.f3 {
+    flex: 3;
+}
+
+.f4 {
+    flex: 4;
+}
+
+.f5 {
+    flex: 5;
+}
+
 .mt1 {
     margin-top: 1rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.mt3 {
+    margin-top: 3rem;
+}
+
+.mt4 {
+    margin-top: 4rem;
+}
+
+.mt5 {
+    margin-top: 5rem;
 }
 
 .ml1 {

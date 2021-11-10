@@ -5,7 +5,7 @@ import React, {
   WheelEvent,
   KeyboardEvent,
 } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
 
@@ -25,7 +25,7 @@ const App: React.FC = () => {
       setPage(page - 1);
     }
 
-    if (page > 4 || page === 2 || page === 3) {
+    if (page > 4 || page === 3) {
       setColor('white');
     } else {
       setColor('black');
@@ -43,7 +43,7 @@ const App: React.FC = () => {
       setPage(page + 1);
     }
 
-    if (page >= 3 || page === 0 || page === 1) {
+    if (page >= 3 || page === 1) {
       setColor('white');
     } else {
       setColor('black');
@@ -91,11 +91,18 @@ const App: React.FC = () => {
       tabIndex={0}
       onKeyDown={onKeyDownEvent}
     >
-      <header className={color}>
+      <header
+        className={color}
+        style={{
+          transition: 'all 0.8s ease',
+          WebkitTransition: 'all 0.8s ease',
+          MozTransition: 'all 0.8s ease',
+        }}
+      >
         <div className="header-f1">hwJames</div>
         <div className="header-f2 ml5">+82 10-4509-8036</div>
         <div className="header-f2 ml1">/</div>
-        <div className="header-f2 ml1">HWJAMESHW@NAVER.COM</div>
+        <div className="header-f2 ml1">hwjameshw@naver.com</div>
       </header>
 
       <article>
@@ -103,26 +110,73 @@ const App: React.FC = () => {
         <section>
           <div className="wrap">
             <div className="home-f1">JIHOON KIM</div>
-            <div className="home-f2 mt1">
-              HELLO WORLD! <br />
+            <div className="home-f2">
+              Hello World! <br />
               I&apos;m Developer
             </div>
           </div>
         </section>
 
-        {/* About (Stack) */}
-        <section className="about-wrap white">
+        {/* Resume */}
+        <section>
           <div className="wrap">
-            <div className="about-f1">씨이잉ㅇㅇ 집이 가고 시펑요</div>
+            <div className="resume-f1">Resume</div>
+            <Carousel className="resume-container" variant="dark">
+              <Carousel.Item>
+                <div className="resume-f2 mt1">Education</div>
+                <hr />
+                <div className="resume-wrap">
+                  <div className="f2">2020.02 ~</div>
+                  <div className="f2">
+                    한국방송통신대학교
+                    <br />
+                    <div className="resume-f3">- 컴퓨터과학과</div>
+                  </div>
+                  <div className="f3">1</div>
+                </div>
+                <hr />
+                <div className="resume-wrap">
+                  <div className="f2">2017.02 ~ 2020.02</div>
+                  <div className="f2">
+                    상일미디어고등학교
+                    <br />
+                    <div className="resume-f3">- 스마트소프트웨어과</div>
+                  </div>
+                  <div className="f3">1</div>
+                </div>
+                <hr />
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="resume-f2 mt1">Experience</div>
+                <hr />
+                <div className="resume-wrap">
+                  <div className="f2">1</div>
+                  <div className="f2">1</div>
+                  <div className="f3">1</div>
+                </div>
+                <hr />
+                <div className="resume-wrap">
+                  <div className="f2">1</div>
+                  <div className="f2">1</div>
+                  <div className="f3">1</div>
+                </div>
+                <hr />
+                <div className="resume-wrap">
+                  <div className="f2">1</div>
+                  <div className="f2">1</div>
+                  <div className="f3">1</div>
+                </div>
+                <hr />
+              </Carousel.Item>
+            </Carousel>
           </div>
-          <div className="about-sub"></div>
         </section>
 
-        {/* Experience */}
-        <section className="experience-wrap white">
+        {/* Stack */}
+        <section className="stack-wrap white">
           <div className="black-wrap center">
             <div className="wrap">
-              <div className="experience-f1">Experience</div>
+              <div className="stack-f1">Stack</div>
             </div>
           </div>
         </section>
@@ -145,7 +199,14 @@ const App: React.FC = () => {
           </div>
         </section>
       </article>
-      <footer className={color}>
+      <footer
+        className={color}
+        style={{
+          transition: 'all 0.8s ease',
+          WebkitTransition: 'all 0.8s ease',
+          MozTransition: 'all 0.8s ease',
+        }}
+      >
         © 2021 JIHOON KIM
         <br />
         ALL RIGHTS RESERVED.
