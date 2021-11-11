@@ -98,11 +98,28 @@ section {
     color: rgba(127, 127, 127, 1);
 }
 
+.resume-f4 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
+}
+
 .resume-container {
     height: 60vh;
 }
 
-.resume-wrap {
+.resume-wrap1 {
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
+}
+
+.resume-wrap2 {
     min-height: 5em;
     display: flex;
     align-items: center;
@@ -160,6 +177,14 @@ section {
     width: 60vw;
 }
 
+.br {
+    width: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: lightgray;
+    height: 3em;
+}
+
 .f1 {
     flex: 1;
 }
@@ -200,6 +225,10 @@ section {
     margin-top: 5rem;
 }
 
+.mt10px {
+    margin-top: 10px;
+}
+
 .ml1 {
     margin-left: 1rem;
 }
@@ -218,6 +247,14 @@ section {
 
 .ml5 {
     margin-left: 5rem;
+}
+
+.ml5px {
+    margin-left: 5px;
+}
+
+.ml20px {
+    margin-left: 20px;
 }
 
 footer {

@@ -5,7 +5,7 @@ import React, {
   WheelEvent,
   KeyboardEvent,
 } from 'react';
-import { Button, Carousel } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
 
@@ -121,11 +121,63 @@ const App: React.FC = () => {
         <section>
           <div className="wrap">
             <div className="resume-f1">Resume</div>
-            <Carousel className="resume-container" variant="dark">
+            <div className="resume-f2 mt1">Education</div>
+            <hr />
+            <div className="resume-wrap1">
+              <div className="f2">2020.02 ~</div>
+              <div className="f2">
+                한국방송통신대학교
+                <br />
+                <div className="resume-f3">- 컴퓨터과학과</div>
+              </div>
+              <div className="br" />
+              <div className="f2">2017.02 ~ 2020.02</div>
+              <div className="f2">
+                상일미디어고등학교
+                <br />
+                <div className="resume-f3">- 스마트소프트웨어과</div>
+              </div>
+            </div>
+            <hr />
+            <div className="resume-f2 mt1">Experience</div>
+            <hr />
+            <div className="resume-wrap2">
+              <div className="f2">2020.02 ~</div>
+              <div className="f2">
+                피플벤처스
+                <br />
+                <div className="resume-f3">- Android / Web / RN Developer</div>
+              </div>
+              <div className="f4 ml20px">
+                <div>
+                  홍카페GO, 보이스프렌즈
+                  <span className="resume-f3 ml5px">
+                    (Android - Java, Kotlin)
+                  </span>
+                </div>
+                <div className="resume-f4">MVVM + AAC 기반 네이티브앱 개발</div>
+
+                <div className="mt10px">
+                  홍카페, 홍스토어, MMA
+                  <span className="resume-f3 ml5px">(CI4)</span>
+                </div>
+                <div className="resume-f4">
+                  MVC 기반 서비스단, 어드민단 개발
+                </div>
+
+                <div className="mt10px">
+                  보이스프렌즈2
+                  <span className="resume-f3 ml5px">(React Native, CI4)</span>
+                </div>
+                <div className="resume-f4">API 개발 및 공통 컴포넌트 개발</div>
+              </div>
+            </div>
+            <hr />
+            {/* <Carousel className="resume-container">
               <Carousel.Item>
                 <div className="resume-f2 mt1">Education</div>
                 <hr />
-                <div className="resume-wrap">
+                <div className="resume-wrap1">
                   <div className="f2">2020.02 ~</div>
                   <div className="f2">
                     한국방송통신대학교
@@ -135,7 +187,7 @@ const App: React.FC = () => {
                   <div className="f3">1</div>
                 </div>
                 <hr />
-                <div className="resume-wrap">
+                <div className="resume-wrap1">
                   <div className="f2">2017.02 ~ 2020.02</div>
                   <div className="f2">
                     상일미디어고등학교
@@ -149,26 +201,26 @@ const App: React.FC = () => {
               <Carousel.Item>
                 <div className="resume-f2 mt1">Experience</div>
                 <hr />
-                <div className="resume-wrap">
+                <div className="resume-wrap2">
                   <div className="f2">1</div>
                   <div className="f2">1</div>
                   <div className="f3">1</div>
                 </div>
                 <hr />
-                <div className="resume-wrap">
+                <div className="resume-wrap2">
                   <div className="f2">1</div>
                   <div className="f2">1</div>
                   <div className="f3">1</div>
                 </div>
                 <hr />
-                <div className="resume-wrap">
+                <div className="resume-wrap2">
                   <div className="f2">1</div>
                   <div className="f2">1</div>
                   <div className="f3">1</div>
                 </div>
                 <hr />
               </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
           </div>
         </section>
 
