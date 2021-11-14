@@ -1,3 +1,13 @@
-.env
+.github
 dist
 build
+node_modules
+.env
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

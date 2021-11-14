@@ -173,54 +173,6 @@ const App: React.FC = () => {
               </div>
             </div>
             <hr />
-            {/* <Carousel className="resume-container">
-              <Carousel.Item>
-                <div className="resume-f2 mt1">Education</div>
-                <hr />
-                <div className="resume-wrap1">
-                  <div className="f2">2020.02 ~</div>
-                  <div className="f2">
-                    한국방송통신대학교
-                    <br />
-                    <div className="resume-f3">- 컴퓨터과학과</div>
-                  </div>
-                  <div className="f3">1</div>
-                </div>
-                <hr />
-                <div className="resume-wrap1">
-                  <div className="f2">2017.02 ~ 2020.02</div>
-                  <div className="f2">
-                    상일미디어고등학교
-                    <br />
-                    <div className="resume-f3">- 스마트소프트웨어과</div>
-                  </div>
-                  <div className="f3">1</div>
-                </div>
-                <hr />
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="resume-f2 mt1">Experience</div>
-                <hr />
-                <div className="resume-wrap2">
-                  <div className="f2">1</div>
-                  <div className="f2">1</div>
-                  <div className="f3">1</div>
-                </div>
-                <hr />
-                <div className="resume-wrap2">
-                  <div className="f2">1</div>
-                  <div className="f2">1</div>
-                  <div className="f3">1</div>
-                </div>
-                <hr />
-                <div className="resume-wrap2">
-                  <div className="f2">1</div>
-                  <div className="f2">1</div>
-                  <div className="f3">1</div>
-                </div>
-                <hr />
-              </Carousel.Item>
-            </Carousel> */}
           </div>
         </section>
 
@@ -229,6 +181,8 @@ const App: React.FC = () => {
           <div className="black-wrap center">
             <div className="wrap">
               <div className="stack-f1">Stack</div>
+
+              <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white" />
             </div>
           </div>
         </section>
