@@ -1,15 +1,11 @@
-# Step 1
+# Step 1: Install
 FROM node:16-alpine AS builder
-ENV NODE_ENV prod
-
 WORKDIR /app
 COPY . .
-RUN yarn rebuild && yarn build
+RUN yarn install
 
-# Step 2
+# Step 2: Build
 FROM node:16-alpine
-ENV NODE_ENV prod
-
 WORKDIR /app
 COPY --from=builder /app/.yarn ./.yarn
 COPY --from=builder /app/yarn.lock ./yarn.lock
@@ -19,7 +15,5 @@ COPY --from=builder /app/.pnp.cjs ./.pnp.cjs
 
 COPY --from=builder /app/apps/api/dist ./apps/apps/api/dist
 COPY --from=builder /app/apps/web/build ./apps/apps/web/build
-
-RUN rm -rf /app/.yarn/unplugged && yarn rebuild
 
 CMD [ "yarn", "start:prod" ]

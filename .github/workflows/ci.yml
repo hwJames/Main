@@ -24,8 +24,10 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install dependencies
-        run: yarn install --immutable --immutable-cache
+      - name: Install and Build
+        run: |
+          yarn install --immutable --immutable-cache
+          yarn build
 
       -
         name: Set up QEMU
@@ -52,7 +54,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       -
-        name: Build and push
+        name: Docker Build and Push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
@@ -75,7 +77,15 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-        
+
+
+  depoly:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Depoly
+        run: echo Start Depoly
       # - 
       #   name: executing remote ssh commands using key (prod)
       #   if: github.ref == 'refs/heads/main'
@@ -85,4 +95,4 @@ jobs:
       #     username: ${{ secrets.USERNAME }}
       #     key: ${{ secrets.KEY }}
       #     port: ${{ secrets.PORT }}
-      #     script: kubectl patch deployment prod-dmcmenu-api -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"build\":\"${{ github.sha }}\"}}}}}}"
+      #     script: kubectl patch deployment prod-main-api -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"build\":\"${{ github.sha }}\"}}}}}}"
