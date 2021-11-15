@@ -176,13 +176,61 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* Stack */}
+        {/* Skill */}
         <section className="stack-wrap white">
           <div className="black-wrap center">
             <div className="wrap">
-              <div className="stack-f1">Stack</div>
+              <div className="stack-f1">Skill</div>
+              <div className="mt10px">Fontend</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
+                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" />
+                <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white" />
+              </div>
 
-              <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white" />
+              <div className="mt10px">Backend</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/NodeJS-339933?style=for-the-badge&logo=Node.js&logoColor=white" />
+                <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=white" />
+                <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white" />
+                <img src="https://img.shields.io/badge/CI4-EF4223?style=for-the-badge&logo=CodeIgniter&logoColor=white" />
+              </div>
+
+              <div className="mt10px">Mobile</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white" />
+                <img src="https://img.shields.io/badge/React Native-61DAFB?style=for-the-badge&logo=React&logoColor=black" />
+              </div>
+
+              <div className="mt10px">DevOps</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white" />
+                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white" />
+                <img src="https://img.shields.io/badge/K3S-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white" />
+                <img src="https://img.shields.io/badge/Bitrise-683D87?style=for-the-badge&logo=Bitrise&logoColor=white" />
+                <img src="https://img.shields.io/badge/Fastlane-00F200?style=for-the-badge&logo=Fastlane&logoColor=white" />
+              </div>
+
+              <div className="mt10px">VSC</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white" />
+                <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
+                <img src="https://img.shields.io/badge/GitKraken-179287?style=for-the-badge&logo=GitKraken&logoColor=white" />
+              </div>
+
+              <div className="mt10px">Server</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white" />
+                <img src="https://img.shields.io/badge/Raspberry Pi-A22846?style=for-the-badge&logo=Raspberry Pi&logoColor=white" />
+              </div>
+
+              <div className="mt10px">DB</div>
+              <div className="mt5px">
+                <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" />
+                <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white" />
+                <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white" />
+                <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=Redis&logoColor=white" />
+              </div>
             </div>
           </div>
         </section>
