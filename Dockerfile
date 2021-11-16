@@ -13,7 +13,11 @@ COPY --from=builder /app/.yarnrc.yml ./.yarnrc.yml
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.pnp.cjs ./.pnp.cjs
 
-COPY --from=builder /app/apps/api/dist ./apps/apps/api/dist
-COPY --from=builder /app/apps/web/build ./apps/apps/web/build
+COPY --from=builder /app/apps/api/dist ./apps/api/dist
+COPY --from=builder /app/apps/api/package.json ./apps/api/package.json
+
+COPY --from=builder /app/apps/web/build ./apps/web/build
+COPY --from=builder /app/apps/web/package.json ./apps/web/package.json
+
 
 CMD [ "yarn", "start:prod" ]
