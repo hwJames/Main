@@ -56,7 +56,7 @@ section {
 .black-wrap {
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .home-wrap {
@@ -129,18 +129,29 @@ section {
     letter-spacing: -1px;
 }
 
-.stack-wrap {
-    background-image: url(../img/experience.jpg);
+.skill-wrap {
+    background-image: url(../img/skill.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size : cover;
 }
 
-.stack-f1 {
+.skill-f1 {
     font-size: 3.5rem;
     font-weight: 800;
     font-family: "Pretendard";
     letter-spacing: -1px;
+}
+
+.skill-f2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Pretendard";
+    letter-spacing: -0.5px;
+}
+
+.skill-f2 img {
+    margin-right: 5px;
 }
 
 .portfolio-wrap {
