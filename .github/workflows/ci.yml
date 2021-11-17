@@ -86,13 +86,13 @@ jobs:
       -
         name: Depoly
         run: echo Start Depoly
-      # - 
-      #   name: executing remote ssh commands using key (prod)
-      #   if: github.ref == 'refs/heads/main'
-      #   uses: appleboy/ssh-action@master
-      #   with:
-      #     host: ${{ secrets.HOST }}
-      #     username: ${{ secrets.USERNAME }}
-      #     key: ${{ secrets.KEY }}
-      #     port: ${{ secrets.PORT }}
-      #     script: kubectl patch deployment prod-main-api -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"build\":\"${{ github.sha }}\"}}}}}}"
+      - 
+        name: executing remote ssh commands using key (prod)
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: kubectl patch deployment prod-main -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"build\":\"${{ github.sha }}\"}}}}}}"
