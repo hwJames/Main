@@ -154,14 +154,24 @@ section {
     margin-right: 5px;
 }
 
-.portfolio-wrap {
-}
-
 .portfolio-f1 {
     font-size: 3.5rem;
     font-weight: 800;
     font-family: "Pretendard";
     letter-spacing: -1px;
+}
+
+.portfolio-f2 {
+    height: 50vh;
+}
+
+.portfolio-f3 {
+    height: 20vh;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Pretendard";
+    letter-spacing: -1px;
+    color: grey;
 }
 
 .contact-wrap {

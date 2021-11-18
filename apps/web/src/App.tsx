@@ -5,7 +5,7 @@ import React, {
   WheelEvent,
   KeyboardEvent,
 } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
 
@@ -15,6 +15,8 @@ const App: React.FC = () => {
   const pageCnt = 5;
   const [page, setPage] = useState(0);
   const [color, setColor] = useState('black');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [portfolio, setPortfolio] = useState([]);
 
   useEffect(() => {
     window.scroll({ top: page * window.innerHeight, behavior: 'smooth' });
@@ -238,9 +240,38 @@ const App: React.FC = () => {
         </section>
 
         {/* Portfolio */}
-        <section className="portfolio-wrap">
+        <section>
           <div className="wrap">
             <div className="portfolio-f1">Portfolio</div>
+            {portfolio && portfolio.length > 0 ? (
+              <Carousel variant="dark" className="-f2">
+                {portfolio.map((data, index) => {
+                  return (
+                    <Carousel.Item
+                      className="portfolio-f2"
+                      key={`portfolio_${index}`}
+                    >
+                      <img
+                        className="d-block w-100"
+                        src="holder.js/800x400?text=First slide&bg=373940"
+                        alt="First slide"
+                      />
+                      <Carousel.Caption>
+                        <h3>First slide label</h3>
+                        <p>
+                          Nulla vitae elit libero, a pharetra augue mollis
+                          interdum.
+                        </p>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  );
+                })}
+              </Carousel>
+            ) : (
+              <div className="portfolio-f3 center">
+                등록된 포트폴리오가 없습니다.
+              </div>
+            )}
           </div>
         </section>
 
