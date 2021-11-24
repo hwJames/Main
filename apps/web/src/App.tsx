@@ -5,7 +5,8 @@ import React, {
   WheelEvent,
   KeyboardEvent,
 } from 'react';
-import { Button, Carousel } from 'react-bootstrap';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Button, Carousel, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/App.css';
 
@@ -17,6 +18,12 @@ const App: React.FC = () => {
   const [color, setColor] = useState('black');
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [portfolio, setPortfolio] = useState([]);
+
+  const renderTooltip = ({ text, ...props }: any) => (
+    <Tooltip id="button-tooltip" {...props}>
+      {text}
+    </Tooltip>
+  );
 
   useEffect(() => {
     window.scroll({ top: page * window.innerHeight, behavior: 'smooth' });
@@ -186,32 +193,124 @@ const App: React.FC = () => {
               <div className="skill-f2">
                 <div className="mt10px">Fontend</div>
                 <div className="mt5px">
-                  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
-                  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" />
-                  <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white" />
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({ text: 'HTML5를 다룰줄 압니다' })}
+                  >
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: '간단한 정렬, 수정을 해본적이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'jQuery 를 활용한 데이터 처리, 이벤트 처리를 할 수 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white" />
+                  </OverlayTrigger>
                 </div>
 
                 <div className="mt10px">Backend</div>
                 <div className="mt5px">
-                  <img src="https://img.shields.io/badge/NodeJS-339933?style=for-the-badge&logo=Node.js&logoColor=white" />
-                  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=white" />
-                  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white" />
-                  <img src="https://img.shields.io/badge/CI4-EF4223?style=for-the-badge&logo=CodeIgniter&logoColor=white" />
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'NestJS를 활용한 프로젝트를 진행한 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'CI4 프로젝트에 참여한 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/CI4-EF4223?style=for-the-badge&logo=CodeIgniter&logoColor=white" />
+                  </OverlayTrigger>
                 </div>
 
                 <div className="mt10px">Mobile</div>
                 <div className="mt5px">
-                  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white" />
-                  <img src="https://img.shields.io/badge/React Native-61DAFB?style=for-the-badge&logo=React&logoColor=black" />
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'MVC, MVVM 패턴의 앱을 제작한 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'React Native 를 사용한 앱을 제작한 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/React Native-61DAFB?style=for-the-badge&logo=React&logoColor=black" />
+                  </OverlayTrigger>
                 </div>
 
                 <div className="mt10px">DevOps</div>
                 <div className="mt5px">
-                  <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white" />
-                  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white" />
-                  <img src="https://img.shields.io/badge/K3S-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white" />
-                  <img src="https://img.shields.io/badge/Bitrise-683D87?style=for-the-badge&logo=Bitrise&logoColor=white" />
-                  <img src="https://img.shields.io/badge/Fastlane-00F200?style=for-the-badge&logo=Fastlane&logoColor=white" />
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'Github Actions를 활용한 서비스 배포 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'Docker를 활용한 서비스 배포 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'K3S를 활용한 무중단 서비스 배포 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/K3S-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'Bitrise를 활용한 Android 앱 자동 배포 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/Bitrise-683D87?style=for-the-badge&logo=Bitrise&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'Fastlane를 활용한 iOS(RN) 자동 배포 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/Fastlane-00F200?style=for-the-badge&logo=Fastlane&logoColor=white" />
+                  </OverlayTrigger>
                 </div>
 
                 <div className="mt10px">VSC</div>
@@ -223,8 +322,24 @@ const App: React.FC = () => {
 
                 <div className="mt10px">Server</div>
                 <div className="mt5px">
-                  <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white" />
-                  <img src="https://img.shields.io/badge/Raspberry Pi-A22846?style=for-the-badge&logo=Raspberry Pi&logoColor=white" />
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: 'AWS(EC2) 를 통한 서버 구축 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white" />
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 200, hide: 200 }}
+                    overlay={renderTooltip({
+                      text: '라즈베리파이를 통한 개인 서버 구축 경험이 있습니다.',
+                    })}
+                  >
+                    <img src="https://img.shields.io/badge/Raspberry Pi-A22846?style=for-the-badge&logo=Raspberry Pi&logoColor=white" />
+                  </OverlayTrigger>
                 </div>
 
                 <div className="mt10px">DB</div>
@@ -281,7 +396,6 @@ const App: React.FC = () => {
             <div className="wrap">
               <div className="contact-f1">Contact Me</div>
               <div className="contact-f2">선생님들 연락주세요 :)</div>
-              <Button className="mt1">연락주세요 ^^7</Button>
             </div>
           </div>
         </section>
